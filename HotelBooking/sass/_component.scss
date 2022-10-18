@@ -1,0 +1,121 @@
+// Header logo
+.logo-box {
+    
+    margin-left: 2rem;
+
+    &__logo {
+        height: 3.25rem; 
+        width: 4.5rem;
+    }
+}
+
+//search box
+.search-box {
+    flex: 0 0 40%;
+    height: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+        background-color: var(--Grey-light-2);
+        border-radius: 50px;
+        width: 90%;
+        padding: .7rem 2rem;
+        height: 100%;
+        border: none;
+        margin-right: -3.25rem;
+        transition: all .2s;
+        font-size: inherit;
+        font-family: inherit;
+        color: inherit;
+
+        &:focus {
+            outline: none;
+            width: 100%;
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: var(--Grey-light-4);
+        }
+    }
+
+
+
+    &__button {
+        border: none;
+        background-color: var(--Grey-light-2);
+
+        &:focus {
+            outline: none;
+        }
+        &:active{
+            transform: translateY(2px);
+        }
+    }
+
+    &__icon {
+        width: 2.5rem;
+        height: 1.5rem;
+        fill: red;
+    }
+}
+
+.header-nav {
+
+    align-self: stretch;
+
+    background-color: rgb(145, 224, 145);
+    display: flex;
+    align-items: center;
+
+    & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    & > *:hover {
+        background-color: var(--Grey-light-3);
+    }
+
+
+    &__container {
+        position: relative;
+
+        &__icon {
+            width: 4rem;
+            height: 3rem;
+        }
+
+        &__notification {
+            color: white;
+            padding: .3rem;
+            background-color: var(--color-primary);
+            font-size: 1rem;
+            font-family: inherit;
+            position: absolute;
+            border-radius: 50%;
+            top: 1rem;
+            right: 2rem;
+        }
+
+    }
+
+    &__user {
+        &__icon {
+            width:4rem;
+            height:4rem;
+            border-radius: 50%;
+        }
+
+        &__name {
+            margin-left: 1rem;
+        }
+    }
+
+}

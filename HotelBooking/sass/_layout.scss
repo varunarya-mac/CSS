@@ -10,6 +10,11 @@
     height: 7rem;
     background-color: #fff;
     border-bottom: var(--Grey-light-2);
+    font-size: 1.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .content {
@@ -18,7 +23,6 @@
 
 .side-bar {
     background-color: var(--Grey-dark-2);
-
     flex: 0 0 18%;
 
 }

@@ -34,6 +34,83 @@ body {
   background-size: cover;
   min-height: 100vh; }
 
+.logo-box {
+  margin-left: 2rem; }
+  .logo-box__logo {
+    height: 3.25rem;
+    width: 4.5rem; }
+
+.search-box {
+  flex: 0 0 40%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .search-box__text {
+    background-color: var(--Grey-light-2);
+    border-radius: 50px;
+    width: 90%;
+    padding: .7rem 2rem;
+    height: 100%;
+    border: none;
+    margin-right: -3.25rem;
+    transition: all .2s;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit; }
+    .search-box__text:focus {
+      outline: none;
+      width: 100%; }
+    .search-box__text::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--Grey-light-4); }
+  .search-box__button {
+    border: none;
+    background-color: var(--Grey-light-2); }
+    .search-box__button:focus {
+      outline: none; }
+    .search-box__button:active {
+      transform: translateY(2px); }
+  .search-box__icon {
+    width: 2.5rem;
+    height: 1.5rem;
+    fill: red; }
+
+.header-nav {
+  align-self: stretch;
+  background-color: #91e091;
+  display: flex;
+  align-items: center; }
+  .header-nav > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center; }
+  .header-nav > *:hover {
+    background-color: var(--Grey-light-3); }
+  .header-nav__container {
+    position: relative; }
+    .header-nav__container__icon {
+      width: 4rem;
+      height: 3rem; }
+    .header-nav__container__notification {
+      color: white;
+      padding: .3rem;
+      background-color: var(--color-primary);
+      font-size: 1rem;
+      font-family: inherit;
+      position: absolute;
+      border-radius: 50%;
+      top: 1rem;
+      right: 2rem; }
+  .header-nav__user__icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%; }
+  .header-nav__user__name {
+    margin-left: 1rem; }
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -44,7 +121,11 @@ body {
 .header {
   height: 7rem;
   background-color: #fff;
-  border-bottom: var(--Grey-light-2); }
+  border-bottom: var(--Grey-light-2);
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
 
 .content {
   display: flex; }

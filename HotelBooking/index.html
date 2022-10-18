@@ -13,7 +13,37 @@
     <body>
         <div class="container">
             <header class="header">
-                header
+                <div class="logo-box">
+                    <img src="img/logo.png" alt="logo" class="logo-box__logo">
+                </div>
+                <form action="#" class="search-box">
+                    <input type="text" placeholder="Type"  class="search-box__text">
+                    <button class="search-box__button">
+                        <svg class="search-box__icon">
+                            <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                        </svg>
+                    </button>                 
+                </form>
+                <nav class="header-nav">
+                    <div class="header-nav__container">
+                        <svg class="header-nav__container__icon">
+                            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                        </svg>
+                        <span class="header-nav__container__notification">8</span>
+                    </div>
+                    <div class="header-nav__container">
+                        <svg class="header-nav__container__icon">
+                            <use xlink:href="img/sprite.svg#icon-chat"></use>
+                        </svg>
+                        <span class="header-nav__container__notification">13</span>
+                    </div>
+                    <div class="header-nav__user">
+                        <img  class="header-nav__user__icon" src="img/user.jpeg" alt="user-icon">
+                        <span class="header-nav__user__name">Varun</span>
+                    </div>
+                </nav>
+                
+                
             </header>
             <div class="content">
                 <nav class="side-bar">Navigation</nav>
