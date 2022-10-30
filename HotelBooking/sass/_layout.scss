@@ -28,9 +28,17 @@
     justify-content: space-between;
     align-items: center;
     color: #fff;
-    height: 50rem;
 }
 
 .hotel-view {
     flex: 1;
+}
+
+.hotel-detail {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--Grey-light-1);
+    padding: 2.5rem;
+    justify-content: space-between;
+    
 }
