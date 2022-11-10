@@ -51,3 +51,24 @@
       animation: moveInBottom 1s ease-out 1s backwards;
     }
   }
+
+
+  .info-more {
+
+    &:link,
+    &:visited {
+    text-decoration: none;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    display: inline-block;
+    color: $primary-color-dark;
+    border-bottom: 1px solid $primary-color-dark;
+    transition: all .2s;
+    }
+
+    &:hover {
+      background-color: $primary-color-light;
+      transform: translateY(4px);
+    }
+    
+  }

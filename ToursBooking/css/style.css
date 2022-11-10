@@ -40,6 +40,33 @@ body {
     animation-duration: 2s;
     animation-timing-function: ease-out; }
 
+.secondary__heading {
+  font-size: 3.5rem;
+  display: inline-block;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, #19f519, green);
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 3rem;
+  margin-top: 20rem;
+  transition: all .2s;
+  margin-bottom: 8rem; }
+  .secondary__heading:hover {
+    transform: rotate(2deg);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.subpart__heading {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2rem;
+  margin-bottom: 2rem; }
+
+.paragrap {
+  font-size: 1.5rem; }
+
+.paragrap:not(:last-child) {
+  margin-bottom: 3rem; }
+
 @keyframes moveInLeft {
   0% {
     transform: translateX(-10rem); }
@@ -108,8 +135,89 @@ body {
 .btn--animated {
   animation: moveInBottom 1s ease-out 1s backwards; }
 
+.info-more:link, .info-more:visited {
+  text-decoration: none;
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+  display: inline-block;
+  color: #28b485;
+  border-bottom: 1px solid #28b485;
+  transition: all .2s; }
+
+.info-more:hover {
+  background-color: #7ed56f;
+  transform: translateY(4px); }
+
+.composition {
+  position: relative;
+  z-index: 10; }
+  .composition__photos {
+    width: 35%;
+    position: absolute;
+    outline-offset: 2rem;
+    transition: all .2s;
+    box-shadow: 2px 2px 1rem black; }
+  .composition__photos--p1 {
+    top: -1rem;
+    left: 0; }
+  .composition__photos--p2 {
+    top: 2rem;
+    left: 18rem; }
+  .composition__photos--p3 {
+    top: 10rem;
+    left: 4rem; }
+  .composition__photos:hover {
+    z-index: 20;
+    outline: 1rem solid #7ed56f;
+    transform: scale(1.2) translateY(-2px);
+    box-shadow: 3px 3px 1rem black; }
+
+.features {
+  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.569), rgba(40, 180, 133, 0.761)), url("../img/hero.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: -13rem;
+  height: 90vh;
+  clip-path: polygon(0 19%, 100% 0, 100% 80%, 0 100%); }
+  .features .feature__item {
+    background-color: white;
+    height: 40%;
+    width: 22rem;
+    margin: 10rem 3rem;
+    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: all .2s; }
+    .features .feature__item:hover {
+      transform: translateY(5px);
+      box-shadow: 0 1rem 2rem black; }
+    .features .feature__item__heading {
+      flex: 0 0 15%;
+      font-size: 2rem;
+      line-height: 2rem;
+      text-align: center;
+      text-transform: uppercase;
+      display: inline-block; }
+    .features .feature__item__text {
+      flex: 1;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      text-align: left;
+      padding: 0 2rem; }
+    .features .feature__item__icon {
+      width: 4rem;
+      height: 4rem;
+      fill: #28b485;
+      flex: 0 0 35%; }
+
 .header {
-  height: 95vh;
+  height: 90vh;
   background-image: linear-gradient(to right, rgba(126, 213, 111, 0.569), rgba(40, 180, 133, 0.761)), url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
@@ -127,3 +235,30 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.tour__details {
+  height: 100vh;
+  background-color: #fff;
+  margin-top: -15rem; }
+  .tour__details-title {
+    text-align: center; }
+  .tour__details .tour__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .tour__details .tour__info .info__detail {
+      flex: 0 0 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      height: 20rem;
+      margin-left: 15rem; }
+      .tour__details .tour__info .info__detail .detail-subpart {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        line-height: normal;
+        flex-wrap: wrap; }
+    .tour__details .tour__info .info__images {
+      flex: 1; }
