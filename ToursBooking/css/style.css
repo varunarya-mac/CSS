@@ -172,6 +172,66 @@ body {
     transform: scale(1.2) translateY(-2px);
     box-shadow: 3px 3px 1rem black; }
 
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; }
+
+.card__item {
+  position: relative;
+  flex: 0 0 20%;
+  margin-top: 2rem;
+  transition: all .2s;
+  perspective: 150rem;
+  -webkit-perspective: 150rem;
+  text-align: center; }
+  .card__item:hover .card__item__front {
+    transform: rotateY(180deg); }
+  .card__item:hover .card__item__back {
+    transform: rotateY(0deg); }
+  .card__item__side {
+    left: 0;
+    font-size: 2rem;
+    width: 100%;
+    top: 0;
+    height: 25rem;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: all .2s; }
+  .card__item__front {
+    background-color: pink; }
+  .card__item__back {
+    background-color: green;
+    transform: rotateY(180deg); }
+
+.tour__details {
+  height: 100vh;
+  background-color: #fff;
+  margin-top: -15rem; }
+  .tour__details-title {
+    text-align: center; }
+  .tour__details .tour__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .tour__details .tour__info .info__detail {
+      flex: 0 0 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      height: 20rem;
+      margin-left: 15rem; }
+      .tour__details .tour__info .info__detail .detail-subpart {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        line-height: normal;
+        flex-wrap: wrap; }
+    .tour__details .tour__info .info__images {
+      flex: 1; }
+
 .features {
   background-image: linear-gradient(to right, rgba(126, 213, 111, 0.569), rgba(40, 180, 133, 0.761)), url("../img/hero.jpg");
   background-size: cover;
@@ -211,10 +271,17 @@ body {
       text-align: left;
       padding: 0 2rem; }
     .features .feature__item__icon {
-      width: 4rem;
-      height: 4rem;
+      width: 5rem;
+      height: 5rem;
       fill: #28b485;
       flex: 0 0 35%; }
+
+.tours {
+  height: 100vh;
+  background-color: #fff;
+  margin-top: -15rem; }
+  .tours .tour__title {
+    text-align: center; }
 
 .header {
   height: 90vh;
@@ -235,30 +302,3 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
-
-.tour__details {
-  height: 100vh;
-  background-color: #fff;
-  margin-top: -15rem; }
-  .tour__details-title {
-    text-align: center; }
-  .tour__details .tour__info {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
-    .tour__details .tour__info .info__detail {
-      flex: 0 0 50%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-start;
-      height: 20rem;
-      margin-left: 15rem; }
-      .tour__details .tour__info .info__detail .detail-subpart {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        line-height: normal;
-        flex-wrap: wrap; }
-    .tour__details .tour__info .info__images {
-      flex: 1; }
