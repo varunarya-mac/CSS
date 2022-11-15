@@ -182,12 +182,11 @@ body {
   position: relative;
   flex: 0 0 20%;
   margin-top: 2rem;
-  transition: all .2s;
   perspective: 150rem;
   -webkit-perspective: 150rem;
   text-align: center; }
   .card__item:hover .card__item__front {
-    transform: rotateY(180deg); }
+    transform: rotateY(-180deg); }
   .card__item:hover .card__item__back {
     transform: rotateY(0deg); }
   .card__item__side {
@@ -195,15 +194,69 @@ body {
     font-size: 2rem;
     width: 100%;
     top: 0;
-    height: 25rem;
+    color: #2bb8b1;
+    height: 30rem;
     backface-visibility: hidden;
     position: absolute;
-    transition: all .2s; }
+    transition: all 2s;
+    overflow: hidden;
+    border-radius: 5px; }
+    .card__item__side .card__image {
+      background-size: cover;
+      height: 15rem;
+      width: 100%;
+      background-blend-mode: color;
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+      .card__item__side .card__image--1 {
+        background-image: linear-gradient(to right bottom, #ba9a0c, #ffef15), url("../img/nat-5.jpg"); }
+      .card__item__side .card__image--2 {
+        background-image: linear-gradient(to right bottom, #241b76, #8406f2), url("../img/nat-6.jpg"); }
+      .card__item__side .card__image--3 {
+        background-image: linear-gradient(to right bottom, #fc5c8c, #de00de), url("../img/nat-7.jpg"); }
+    .card__item__side .card__heading {
+      font-size: 2rem;
+      font-weight: 300;
+      position: absolute;
+      color: white;
+      width: 60%;
+      top: 9rem;
+      line-height: 2.4rem;
+      right: 0rem;
+      text-align: right; }
+    .card__item__side .card__span {
+      padding: .1rem 1.5rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone; }
+      .card__item__side .card__span--1 {
+        background-image: linear-gradient(to right bottom, #ba9a0c, #ffef15); }
+      .card__item__side .card__span--2 {
+        background-image: linear-gradient(to right bottom, #241b76, #8406f2); }
+      .card__item__side .card__span--3 {
+        background-image: linear-gradient(to right bottom, #de00de, #fc5c8c); }
+  .card__item .card__detail ul {
+    list-style: none;
+    width: 80%;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    padding: 1rem 0;
+    color: black; }
+    .card__item .card__detail ul li {
+      height: 1.5rem;
+      text-align: center;
+      margin: 1rem;
+      padding: .3rem .1rem; }
+      .card__item .card__detail ul li:not(:last-child) {
+        border-bottom: 1px solid lightgray; }
   .card__item__front {
-    background-color: pink; }
+    background-color: rgba(234, 230, 230, 0.968); }
   .card__item__back {
-    background-color: green;
     transform: rotateY(180deg); }
+  .card__item__back--c1 {
+    background-image: linear-gradient(to right bottom, #ba9a0c, #ffef15); }
+  .card__item__back--c2 {
+    background-image: linear-gradient(to right bottom, #241b76, #8406f2); }
+  .card__item__back--c3 {
+    background-image: linear-gradient(to right bottom, #de00de, #fc5c8c); }
 
 .tour__details {
   height: 100vh;
