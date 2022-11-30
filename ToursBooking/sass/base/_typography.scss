@@ -33,14 +33,20 @@ body {
   }
 }
 
-.secondary__heading {
-  font-size: 3.5rem;
+@mixin heading {
   display: inline-block;
   text-transform: uppercase;
   background-image: linear-gradient(to right, rgb(25, 245, 25), green);
   -webkit-background-clip: text;
   color: transparent;
+  font-size: 3.5rem;
   line-height: 3rem;
+}
+
+
+.secondary__heading {
+  @include heading();
+  
   margin-top: 20rem;
   transition: all .2s;
   margin-bottom: 8rem;
@@ -51,6 +57,13 @@ body {
     text-shadow: .5rem 1rem 2rem rgba($color: #000000, $alpha: .2);
   }
 }
+
+.story__section__heading {
+  @include heading();
+  padding: 1rem;
+}
+
+
 
 
 .subpart__heading {
@@ -64,4 +77,17 @@ body {
 }
 .paragrap:not(:last-child) {
   margin-bottom: 3rem;
+}
+
+
+.lines__heading {
+  font-size: 2rem;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.lines {
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  
 }
