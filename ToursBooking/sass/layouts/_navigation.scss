@@ -1,12 +1,11 @@
 .navigation {
-    position: relative;  
+  position: relative;
   .navigation-btn {
     .nav__checkbox {
       display: none;
     }
 
     .checkbox_label {
-      display: inline-block;
       position: fixed;
       right: 4rem;
       top: 4rem;
@@ -31,21 +30,18 @@
         $primary-color-light 0%,
         $primary-color-dark 50%
       );
-      transition:  all .8s;
+      transition: all 0.8s;
     }
 
-    
-
     .nav__checkbox:checked ~ .navigation__bg {
-        scale: (80);
+      scale: (80);
     }
 
     .nav__checkbox:checked ~ .navigation__items {
-        opacity: 1;
+      opacity: 1;
     }
   }
 
-  
   .navigation__items {
     opacity: 0;
     height: 100vh;
@@ -53,37 +49,76 @@
     transition: opacity 1s;
     left: 0;
     top: 0;
-    position: fixed;    
+    position: fixed;
     z-index: 1500;
     display: inline-block;
 
     .nav__list {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
-        height: 100%;
-        width: 100%;
-                
-        
-      .nav__item { 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      height: 100%;
+      width: 100%;
+
+      .nav__item {
         display: inline-block;
         padding: 3rem;
         line-height: 2rem;
         font-size: 2.5rem;
         color: white;
-        transition: all .2s;
-        background-image: linear-gradient(120deg , transparent 50%,  white 50%);
+        transition: all 0.2s;
+        background-image: linear-gradient(120deg, transparent 50%, white 50%);
         background-size: 235%;
-        
 
         &:hover {
-            color: $primary-color-dark;
-            background-position: 100%;
-            transform: translateX(1rem);
+          color: $primary-color-dark;
+          background-position: 100%;
+          transform: translateX(1rem);
         }
       }
     }
   }
+}
+
+.nav-btn__icon {
+  display: inline-block;
+  margin-left: 2rem;
+  
+  &,
+  &::before,
+  &::after {
+    width: 3rem;
+    height: 2px;
+    background-color: $color-grey;
+    position: absolute;
+    left: 0;
+    top: 3.5rem;
+    transition: all .3s;
+  }
+
+  &::before {
+    content: '';
+    top: -1rem;
+  }
+
+  &::after {
+    content: '';
+    top: 1rem;
+  }
+}
+
+.nav__checkbox:checked ~ .checkbox_label .nav-btn__icon {
+  background-color: transparent;
+}
+
+.nav__checkbox:checked ~ .checkbox_label .nav-btn__icon::before {
+  rotate: (135deg);
+  top: 0;
+}
+
+.nav__checkbox:checked ~ .checkbox_label .nav-btn__icon::after {
+  rotate: (-135deg);
+  top: 0;
 }
