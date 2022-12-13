@@ -8,8 +8,54 @@
   box-sizing: inherit;
 }
 
+// Media queries
+/*
+Screen Type
+-> phone (less then 600px)
+-> Tablet portrait: tab-port   (600 - 900px)
+-> Tablet landscape: tab-land (900 - 1200px)
+-> Normal laptop screen (1200 - 1800 px)
+-> Big screen (greter then 1800px)
+*/
+
+
+@mixin respond($screen) {
+
+  @if ($screen == tab-land) {
+      @media (max-width : 1200px) { @content };
+  }
+  @if ($screen == tab-port) {
+      @media (max-width : 900px) { @content };
+  }
+  @if ($screen == phone) {
+      @media (max-width : 600px) { @content };
+  }
+  @if ($screen == big-screen) {
+      @media (min-width : 1800px) { @content };
+  }  
+}
+
+
 html {
   font-size: 62.5%;
+
+  
+
+  
+
+  @include respond(tab-land) {
+    font-size: 50%;
+  }
+  @include respond(tab-port) {
+    font-size: 40%;
+  }
+  @include respond(phone) {
+    font-size: 30%;
+  }
+  @include respond(big-screen) {
+    font-size: 70%;
+  }
+
 }
 
 body {

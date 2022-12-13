@@ -86,6 +86,14 @@
           </div>
           <div class="info__images">
             <div class="composition">
+
+              <!-- <img srcset="img/nat-1.jpg 300w, 
+                            img/nat-1-large.jpg 1000w"
+                   sizes="(max-width : 900px) 20vw, (max-width: 1200px) 30vw,  300px" 
+                    
+                   alt=""> -->
+
+
               <img
                 src="./img/nat-1-large.jpg"
                 alt="nature-pic"
@@ -337,7 +345,14 @@
 
     <footer class="footer">
         <div class="footer__logo">
-          <img src="./img/logo-green-small-2x.png" alt="Footer Logo" class="footer__image">
+          <!-- <img src="./img/logo-green-small-2x.png" alt="Footer Logo" class="footer__image"> -->
+          
+          <picture>
+            <source srcset="./img/logo-green-small-1x.png 1x, ./img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+            <img srcset="./img/logo-green-1x.png 1x, ./img/logo-green-2x.png 2x" alt="Footer Logo" class="footer__image">
+          </picture>
+          
+
         </div>
         <div class="footer__info">
           <div class="info-nav">

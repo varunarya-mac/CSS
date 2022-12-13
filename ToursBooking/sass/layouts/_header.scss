@@ -5,11 +5,23 @@
       rgba($primary-color-light, 0.569),
       rgba($primary-color-dark, 0.761)
     ),
-    url($image-logo-path);
+    url("../img/hero-small.jpg");
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   position: relative;
+
+
+  @media (min-resolution: 192dpi) and (min-width: 600px){
+    background-image: linear-gradient(
+      to right,
+      rgba($primary-color-light, 0.569),
+      rgba($primary-color-dark, 0.761)
+    ),
+    url($image-logo-path);
+    
+  }
+
 
   &__logo-container {
     position: absolute;
