@@ -1,5 +1,40 @@
+%white-bar {
+    width: 4.5rem;
+    height: 2px;
+    background-color: white;
+}
+
 .sidenav {
-    background-color: red;
-    grid-row: 1 / -1;
-    grid-column: sidebar-start / sidebar-end;
+  background-color: $color-primary-dark;
+  grid-row: 1 / -1;
+  grid-column: sidebar-start / sidebar-end;
+  display: flex;
+  justify-content: center;
+
+
+
+  .nav-btn {
+    border: none;
+    border-radius: none;
+    @extend %white-bar;
+    margin-top: 3rem;
+
+
+    
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      @extend %white-bar;
+    }
+
+    &::before {
+      transform: translateY(-10px);
+    }
+
+    &::after {
+        transform: translateY(10px);
+    }
+  }
 }
