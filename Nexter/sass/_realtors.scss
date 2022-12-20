@@ -10,10 +10,19 @@
     justify-items: center;
     align-content: center;
 
+    @media only screen and (max-width: $bp-medium) {
+        grid-row : 3 / 4;
+        grid-column: full-start / full-end;
+        grid-template-rows: min-content;
+      }
 
     &__heading {
         color: $color-primary;
 
+        @media only screen and (max-width: $bp-medium) {
+            display: none;
+            
+          }
     }
 
     &__list {
@@ -23,6 +32,13 @@
         row-gap: 5vh;
         align-items: center;
         color: $color-grey-light-1;
+
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-columns: repeat(3, min-content max-content);
+            column-gap: 5rem;
+          }
+
     }
 
     &__details {

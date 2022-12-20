@@ -8,6 +8,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   line-height: 1.6;
@@ -19,6 +22,13 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(3rem, 0.5fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 0.5fr) [full-end]; }
+  @media only screen and (max-width: 62em) {
+    .container {
+      grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+      grid-template-columns: [full-start] minmax(3rem, 0.5fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 0.5fr) [full-end]; } }
+  @media only screen and (max-width: 50em) {
+    .container {
+      grid-template-rows: 6rem 60vh 20vh min-content 40vw repeat(3, min-content); } }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
@@ -91,17 +101,27 @@ body {
   grid-column: sidebar-start / sidebar-end;
   display: flex;
   justify-content: center; }
+  @media only screen and (max-width: 62em) {
+    .sidenav {
+      grid-row: 1 / 2;
+      grid-column: 1 / -1;
+      justify-content: flex-end;
+      align-items: center; } }
   .sidenav .nav-btn {
     border: none;
     border-radius: none;
     margin-top: 3rem; }
+    @media only screen and (max-width: 62em) {
+      .sidenav .nav-btn {
+        margin-top: 0;
+        margin-right: 1.5rem; } }
     .sidenav .nav-btn::after, .sidenav .nav-btn::before {
       content: "";
       display: block; }
     .sidenav .nav-btn::before {
-      transform: translateY(-10px); }
+      transform: translateY(-1rem); }
     .sidenav .nav-btn::after {
-      transform: translateY(10px); }
+      transform: translateY(0.8rem); }
 
 .header {
   background-color: royalblue;
@@ -110,11 +130,15 @@ body {
   background-position: center;
   grid-column: full-start / col-end 6;
   display: grid;
-  grid-template-rows: 1fr min-content 6rem 1fr;
-  grid-template-columns: max-content;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
   row-gap: 1rem;
   padding-top: 1.5rem;
   justify-content: center; }
+  @media only screen and (max-width: 50em) {
+    .header {
+      grid-row: 2 / 3;
+      grid-column: full-start / full-end; } }
   .header__logo {
     justify-self: center;
     width: 20rem; }
@@ -139,9 +163,11 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
+    align-items: center;
     column-gap: .3rem; }
     .header__company img {
-      height: 2.5rem;
+      max-width: 100%;
+      max-height: 2.5rem;
       filter: brightness(0.6); }
 
 .realtors {
@@ -153,8 +179,16 @@ body {
   justify-content: center;
   justify-items: center;
   align-content: center; }
+  @media only screen and (max-width: 50em) {
+    .realtors {
+      grid-row: 3 / 4;
+      grid-column: full-start / full-end;
+      grid-template-rows: min-content; } }
   .realtors__heading {
     color: #c69963; }
+    @media only screen and (max-width: 50em) {
+      .realtors__heading {
+        display: none; } }
   .realtors__list {
     display: grid;
     grid-template-columns: min-content max-content;
@@ -162,6 +196,10 @@ body {
     row-gap: 5vh;
     align-items: center;
     color: #f9f7f6; }
+    @media only screen and (max-width: 50em) {
+      .realtors__list {
+        grid-template-columns: repeat(3, min-content max-content);
+        column-gap: 5rem; } }
   .realtors__img {
     width: 7rem;
     border-radius: 50%;
@@ -200,6 +238,10 @@ body {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
   align-items: center; }
+  @media only screen and (max-width: 50em) {
+    .story__pictures {
+      grid-column: 1 / -1;
+      grid-row: 6 / 7; } }
 
 .story__img--1 {
   width: 100%;
@@ -220,6 +262,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start; }
+  @media only screen and (max-width: 50em) {
+    .story__content {
+      grid-column: 1 / -1;
+      grid-row: 5 / 6; } }
   .story__content__text {
     font-size: 1.5rem;
     font-style: italic;
